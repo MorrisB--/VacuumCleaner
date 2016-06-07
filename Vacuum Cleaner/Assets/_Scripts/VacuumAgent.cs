@@ -14,6 +14,9 @@ public class VacuumAgent : MonoBehaviour {
 		// Initialize agent target destination
 		// your code here...
 
+		// IDEAS
+		/* 1) Move towards tile A
+		 */
 	}
 	
 	void Update () {
@@ -69,6 +72,9 @@ public class VacuumAgent : MonoBehaviour {
 		// your code here...
 
 		yield return new WaitForSeconds (2.0f);
+		dirtGameObject.SetActive(false); // deactivates the dirt game object
+
+		DirtTransform = null; // since the dirt doesn't exist anymore, DirtTransform should become null.
 		// End cleaning process
 		// make the dirt disappear
 		// your code here...
